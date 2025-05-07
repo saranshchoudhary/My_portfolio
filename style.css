@@ -140,7 +140,11 @@
   .theme-switcher:hover {
     transform: scale(1.2);
   }
-  
+  @media (max-width: 768px) {
+    .theme-switcher {
+      display: block; /* Make sure it's not hidden */
+    }
+  }
   /* Dark Theme */
   body.dark {
     background-color: #121212;
