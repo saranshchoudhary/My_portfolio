@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <!-- Replace this with your logo or profile image -->
+          <img src="assets\photo.jpeg" alt="Profile Logo" class="logo-img" />
+          <span>Portfolio</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#profiles">Profiles</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-switcher" onclick="toggleTheme()" aria-label="Toggle Theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+        <div class="hamburger" onclick="toggleMenu()">
+          &#9776;
+        </div>
+      </nav>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hi, I'm Saransh choudhary</h1>
+      <p>Frontend Web Developer</p>
+      <a href="#projects" class="cta-btn">View My Work</a>
+    </div>
+  </section>
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <div class="container">
+      <div class="about-text">
+
+        <p>
+          Hi! I'm <strong>Saransh Choudhary</strong>, a passionate Frontend Web Developer with a love for clean code,
+          beautiful design, and interactive web experiences. I specialize in HTML, CSS, JavaScript, and modern
+          frameworks. I enjoy solving problems and constantly learning to stay ahead in tech.
+        </p>
+        <p>
+          When I'm not coding, I love exploring design trends, contributing to open-source projects, and sharing what
+          I learn.
+        </p>
+        <a href="assets/Saransh_Choudhary_Resume.pdf" download class="download-cv-btn">Download CV</a>
+      </div>
+      <div class="about-img">
+        <img src="assets/photo.jpeg" alt="Profile Photo" />
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">HTML5</div>
+        <div class="skill-card">CSS3</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React</div>
+        <div class="skill-card">Tailwind CSS</div>
+        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card">Figma</div>
+        <div class="skill-card">Responsive Design</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+  
+      <div class="project-carousel-wrapper">
+        <button class="scroll-btn left" onclick="scrollProjects('left')">&#10094;</button>
+  
+        <div class="projects-grid" id="projectCarousel">
+          <div class="project-card">
+            <img src="assets/netflix.png" alt="Project 1 Screenshot" />
+            <div class="project-content">
+              <h3>Netflix Clone</h3>
+              <p>A frontend clone of Netflix using HTML, CSS, and JavaScript.</p>
+              <span class="tech-stack">HTML, CSS, JavaScript</span>
+              <a href="https://saranshchoudhary.github.io/netflix.github.io/" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+  
+          <div class="project-card">
+            <img src="assets/ubereats.png" alt="Project 2 Screenshot" />
+            <div class="project-content">
+              <h3>Uber Eats Clone</h3>
+              <p>A responsive landing page mimicking Uber Eats.</p>
+              <span class="tech-stack">HTML, CSS</span>
+              <a href="https://saranshchoudhary.github.io/Ubereats.github.io/" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/harmoniq.png" alt="Dummy" />
+            <div class="project-content">
+              <h3>Harmoniq</h3>
+              <p>A music application with 100+ songs from different genre of music built using web technologies like html css and javascript.</p>
+              <span class="tech-stack">HTML CSS Javascript</span>
+              <a href="https://github.com/saranshchoudhary/HarmoniQ" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/weather.jpg" alt="Weather App Screenshot" />
+            <div class="project-content">
+              <h3>Weather App</h3>
+              <p>Shows real-time weather data using OpenWeatherMap API. Includes temperature, forecast, and icons.</p>
+              <span class="tech-stack">HTML, CSS, JavaScript, API</span>
+              <a href="#" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/recipe.jpg" alt="Recipe App Screenshot" />
+            <div class="project-content">
+              <h3>Recipe Finder</h3>
+              <p>Search your favorite dishes and get cooking instructions. Powered by a recipe API.</p>
+              <span class="tech-stack">HTML, CSS, JavaScript, API</span>
+              <a href="#" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/portfolio.png" alt="Portfolio Screenshot" />
+            <div class="project-content">
+              <h3>Portfolio Website</h3>
+              <p>This portfolio website showcases my projects and skills.</p>
+              <span class="tech-stack">HTML, CSS, JavaScript</span>   
+              <a href="https://saranshchoudhary.github.io/Portfolio/" target="_blank" class="project-link">View Project</a>   
+            </div> 
+          </div>
+          <!-- Add more project cards here -->
+        </div>
+  
+        <button class="scroll-btn right" onclick="scrollProjects('right')">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  
+  <section id="profiles" class="profiles-section">
+    <div class="container">
+      <h2>My Profiles</h2>
+      <div class="profiles-grid">
+        <a href="https://leetcode.com/u/saranshchoudhary/" target="_blank" class="profile-card">
+          <img src="assets/leetcode.jpg" alt="LeetCode" />
+          <span>LeetCode</span>
+        </a>
+        <a href="https://www.hackerrank.com/profile/saransh20singh" target="_blank" class="profile-card">
+          <img src="assets/hackerrank.jpg" alt="HackerRank" />
+          <span>HackerRank</span>
+        </a>
+        <a href="https://tryhackme.com/p/0x010101" target="_blank" class="profile-card">
+          <img src="assets/tryhackme.jpg" alt="TryHackMe" />
+          <span>TryHackMe</span>
+        </a>
+        <a href="https://www.cloudskillsboost.google/public_profiles/3259c794-d5b4-4468-9b5a-17bf9dd756a5" target="_blank" class="profile-card">
+          <img src="assets/google-cloud.jpg" alt="Google Cloud" />
+          <span>Google Cloud</span>
+        </a>
+        <a href="https://github.com/saranshchoudhary" target="_blank" class="profile-card">
+          <img src="assets/github.jpg" alt="GitHub" />
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>I'd love to hear from you! Feel free to reach out with any questions, project ideas, or just to say hello.</p>
+  
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/mldbbvky" method="POST">
+            <div class="input-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="input-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>Find Me On:</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/saransh-dev/" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:saransh20singh@gmail.com">Email</a></li>
+            <li><a href="https://github.com/saranshchoudhary" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Saransh Choudhary</h3>
+        <p>&copy; 2025 All rights reserved.</p>
+      </div>
+  
+      <div class="footer-center">
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#profiles">Profiles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-right">
+        <a href="https://github.com/saranshchoudhary" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/saransh-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:saransh20singh@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
